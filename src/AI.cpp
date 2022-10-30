@@ -309,3 +309,9 @@ int AI::quiescenceSearch(int alpha, int beta)
 	// return score
 	return alpha;
 }
+
+// evaluate current position
+int AI::evaluate()
+{
+	return evaluation->evaluate();
+}

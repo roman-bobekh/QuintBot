@@ -1,5 +1,12 @@
 #include "UCI.h"
 
+// main function
+int main(int argc, char* argv[])
+{
+	UCI uci;
+	return uci.execute();
+}
+
 // game constructor
 UCI::UCI()
 {
@@ -67,8 +74,7 @@ int UCI::execute()
 		// evaluation for debugging reasons
 		if (input == "eval")
 		{
-			Evaluation evaluation(&board);
-			int eval = evaluation.evaluate();
+			int eval = ai->evaluate();
 			std::cout << "Evaluation: " << eval << "\n";
 		}
 
@@ -253,11 +259,4 @@ long long UCI::tree(int depth, bool divide)
 
 	// return the number of nodes
 	return nodes;
-}
-
-// main function
-int main(int argc, char* argv[])
-{
-	UCI uci;
-	return uci.execute();
 }

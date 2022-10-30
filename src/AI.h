@@ -43,7 +43,8 @@ class AI
 	std::string getPrincipalVariation(int depth);
 
 public:
-	// constructor and best move function
+	// constructor, best move and evaluation function
 	AI(Board* boardVar);
 	Move getBestMove(int timeLeft = -1, int increment = 0, int depth = -1, int exactTime = -1);
+	int evaluate();
 };
