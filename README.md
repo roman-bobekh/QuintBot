@@ -5,6 +5,12 @@ This project is licensed under the MIT license (see LICENSE.txt), which means th
 The creation of QuintBot was inspired by the video [Coding Adventure: Chess AI](https://www.youtube.com/watch?v=U4ogK0MIzqk) by Sebastian Lague.
 Thanks to the [Chess Programming Wiki](https://www.chessprogramming.org/Main_Page) for providing knowledge about engine development.
 
+## Build and run
+```sh
+make g++        # or: make clang++
+```
+This builds `build/QuintBot`, a UCI engine. Load it into a chess GUI such as Arena or Cute Chess, or run it in a terminal and type UCI commands (`uci`, `position startpos`, `go depth 8`). Prebuilt binaries are in `bin/`.
+
 ## Features
 - Bitboard-based direction-wise move generation based on [DirGolem](https://www.chessprogramming.org/DirGolem)
 - Full implementation of chess rules including, repetitions, 50-move-rules and insufficient material
